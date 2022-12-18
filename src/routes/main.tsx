@@ -32,11 +32,11 @@ export default function Main() {
 
   const speetch = [
     {
-      icon : "path icon",
+      iconClass : "star",
       description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla fuga dicta totam numquam quas commodi, modi dolore quibusdam, consectetur voluptatibus aliquam perferendis at? Voluptates cupiditate vitae vel sapiente dolores ad.",
     },
     {
-      icon : "path icon",
+      iconClass : "star",
       description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem veritatis similique libero incidunt repudiandae, itaque laboriosam, quod possimus eligendi velit magnam dolorum eaque. Ea eligendi vero facilis quaerat fuga commodi.",
     }
   ] 
@@ -52,7 +52,7 @@ export default function Main() {
         <nav>
           {
             links && links.map( ( lk, i ) => {
-              return <Link to={lk.to} >
+              return <Link to={lk.to} key={i} >
                 <span className="nav-index" >{ indexGenerator(i) }</span>
                 <span className='nav-label' >{ lk.label }</span>
               </Link>
@@ -62,9 +62,9 @@ export default function Main() {
 
         <div id='ct-speetch' >
           {
-            speetch && speetch.map( card => {
-              return <div className='card' >
-                <i>{ card.icon }</i>
+            speetch && speetch.map( ( card ,i ) => {
+              return <div className='card' key={i} >
+                <i className={card.iconClass} />
                 <p>{ card.description }</p>
               </div>
             })
