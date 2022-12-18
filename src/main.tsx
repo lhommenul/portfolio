@@ -12,7 +12,7 @@ import "./index.css";
 import Root from "./routes/root";
 import Main from "./routes/main";
 import Projects from "./routes/projects";
-import Project from "./routes/projet";
+import Project from "./routes/project";
 
 const router = createBrowserRouter([
   {
@@ -21,22 +21,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children : [
       {
-        path: "/",
+        path: "",
         element: <Main />,
         errorElement: <ErrorPage />,
-        children : [
-          {
-            path: "/projets",
-            element: <Main />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "/projet/:idproject",
-            element: <Main />,
-            errorElement: <ErrorPage />,
-          },
-        ]
       },  
+      {
+        path: "/projets",
+        element: <Projects />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/projet/:idproject",
+        element: <Project />,
+        errorElement: <ErrorPage />,
+      },      
     ]
   }
 ]);

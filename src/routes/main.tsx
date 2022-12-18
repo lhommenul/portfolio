@@ -14,7 +14,7 @@ export default function Main() {
     },
     {
       label : "About and experience",
-      to : ""
+      to : "projets"
     },
     {
       label : "Playground",
