@@ -1,0 +1,52 @@
+:root{
+  // HEADER
+}
+
+h1{
+  font-size: 8rem;   
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Kaushan','Courier New', Courier, monospace;
+}
+
+#first-step{
+  display: flex;
+  flex-direction: column;
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    a{
+      display: flex;
+      flex-direction: column;
+      .nav-index{
+        opacity: 0.6;
+      }
+      .nav-label{
+        font-weight: 600;
+      }
+    }
+  }
+  #ct-speetch{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-areas: "card1 mimage card2";
+    align-items: center;
+    gap: 2rem;
+    .card{
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      &:nth-child(1){
+        grid-area: card1;
+      }
+      &:nth-child(2){
+        grid-area: card2;
+      }
+    }
+    img{
+      grid-area: mimage;
+    }
+  }
+}

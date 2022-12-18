@@ -1,0 +1,61 @@
+:root{
+  // HEADER
+  --t1-black : 14, 14, 14;
+  --t2-black : 15, 15, 15;
+  --t3-black : 16, 16, 16;
+
+  --t1-white : 255, 251, 240;
+}
+
+@font-face {
+  font-family: Kaushan;
+  src: url('/kaushanregular.ttf');
+  font-weight: 400;
+}
+
+// ROBOTO
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Thin.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/roboto/Roboto-Black.ttf');
+  font-weight: 900;
+}
+
+
+* {
+  color: rgb(var(--t3-black));
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+a{
+  text-decoration: none;
+}
+// ICONS
+.share{
+  content: url('/share.svg');
+  height: 40px;
+  width: 40px;
+}
