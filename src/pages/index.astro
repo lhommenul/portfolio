@@ -86,19 +86,23 @@ const applications = [
 ]
 ---
 
-<Default title="Welcome to Astro.">
-	<main>
+<Default title="Accueil - Antoine Jézéquel">
+	<main class="ml-28 mt-28">
 
-    <ul class="ml-28 mt-28 gap-10 grid grid-flow-col overflow-auto" >
-      {
-        applications.map( app => {
-          return <Card className={ app.className } >
-            <p class="text-cyan-50 text-opacity-90" slot="title" >{ app.title }</p>
-            <p class=" font-semibold text-opacity-90 text-white" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
-          </Card>
-        })
-      }
-    </ul>
+    <section>
+      <h2 class=" text-2xl ">Projets</h2> 
+      <br>
+      <ul class="gap-10 grid grid-flow-col overflow-auto" >
+        {
+          applications.map( app => {
+            return <Card className={ app.className } >
+              <p class="text-cyan-50 text-opacity-90" slot="title" >{ app.title }</p>
+              <p class=" font-semibold text-opacity-90 text-white" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
+            </Card>
+          })
+        }
+      </ul>
+    </section>
 
   </main>
 </Default>
