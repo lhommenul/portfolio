@@ -1,0 +1,15 @@
+---
+interface Props {
+	className: string;
+}
+
+const { className } = Astro.props;
+---
+
+<li class=`w-60 p-4 h-96 rounded shadow-xl flex flex-col justify-between ${className}` >
+  <header>
+    <p class="text-cyan-50 text-opacity-90 "><slot name="title" /></p>
+    <p class=" font-semibold text-opacity-90 text-white" ><slot name="role" /></p>
+  </header>
+  <button class=" bg-gray-950 bg-opacity-80 rounded px-2 py-1 text-cyan-50 self-start" type="button" >Voir Plus</button>
+</li>

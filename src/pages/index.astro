@@ -1,0 +1,104 @@
+---
+import Default from '../layouts/Default.astro';
+import Card from '../components/Card.astro';
+
+const applications = [
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement de l'application ",
+    applicationName : "Karyo - Admin",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement de l'application ",
+    applicationName : "Karyo - Acteur",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Portage et Ajout de features à l'application ",
+    applicationName : "NowWhat",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement de l'API ",
+    applicationName : "Karyo - Beta",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement de l'API ",
+    applicationName : "Improvize - V1",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement de l'API ",
+    applicationName : "Karyo - V1",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-red-500",
+    title : "Improvize",
+    description : "Developpement d'une libraire de composants",
+    applicationName : "",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  },
+  {
+    className : "bg-green-500",
+    title : "Improvize",
+    description : "Developpement du site internet ",
+    applicationName : "Improvize",
+    link : {
+      href : "/demo",
+      label : "Voir Plus"
+    }
+  }
+]
+---
+
+<Default title="Welcome to Astro.">
+	<main>
+
+    <ul class="ml-28 mt-28 gap-10 grid grid-flow-col overflow-auto" >
+      {
+        applications.map( app => {
+          return <Card className={ app.className } >
+            <p class="text-cyan-50 text-opacity-90" slot="title" >{ app.title }</p>
+            <p class=" font-semibold text-opacity-90 text-white" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
+          </Card>
+        })
+      }
+    </ul>
+
+  </main>
+</Default>
