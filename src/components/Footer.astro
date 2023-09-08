@@ -1,0 +1,30 @@
+---
+// interface Props {
+// 	className: string;
+// }
+
+// const { className } = Astro.props;
+const mainPagesLinks = [
+  {
+    href : "mailto:antoinejezequel1998@gmail.com",
+    label : "Email"
+  },
+  {
+    href : "https://www.linkedin.com/in/antoine-j%C3%A9z%C3%A9quel-12223a1a4/",
+    label : "Linkedin"
+  }
+]
+---
+
+<footer class=" bg-slate-500 bg-opacity-20 w-full h-14 flex flex-row justify-between px-8 mt-10">
+
+  <ul class=" flex flex-row gap-3 h-full align-middle justify-end" >
+    {
+      mainPagesLinks.map( link => {
+        return <li class="flex items-center justify-center" >
+          <a target="_blank" href={link.href} class="h-fit font-sans" >{ link.label }</a>
+        </li> 
+      })
+    }
+  </ul>
+</footer>

@@ -1,9 +1,13 @@
 ---
 interface Props {
 	className: string;
+  link: {
+    href : string;
+    label : string;
+  };
 }
 
-const { className } = Astro.props;
+const { className, link } = Astro.props;
 ---
 
 <li class=`w-60 p-4 h-96 rounded shadow-xl flex flex-col justify-between ${className}` >
@@ -11,5 +15,5 @@ const { className } = Astro.props;
     <p class="text-cyan-50 text-opacity-90 "><slot name="title" /></p>
     <p class=" font-semibold text-opacity-90 text-white" ><slot name="role" /></p>
   </header>
-  <button class=" bg-gray-950 bg-opacity-80 rounded px-2 py-1 text-cyan-50 self-start hover:bg-opacity-70" type="button" >Voir Plus</button>
+  <a class=" bg-gray-950 bg-opacity-80 rounded px-2 py-1 text-cyan-50 self-start hover:bg-opacity-70" href={ link.href } >Voir Plus</a>
 </li>

@@ -1,6 +1,7 @@
 ---
 import Default from '../layouts/Default.astro';
 import Card from '../components/Card.astro';
+import {ViewTransitions} from 'astro:transitions';
 
 const applications = [
   {
@@ -79,19 +80,22 @@ const applications = [
     description : "Developpement du site internet ",
     applicationName : "Improvize",
     link : {
-      href : "/demo",
+      href : "/projet/13",
       label : "Voir Plus"
     }
   }
 ]
 ---
+<head>
+  <ViewTransitions />
+</head>
 
 <Default title="Accueil - Antoine Jézéquel">
-	<main class="ml-10 mt-28">
+	<main class="ml-10 mt-16">
 
-    <section class="h-96" >
+    <!-- <section class="h-96" >
       
-    </section>
+    </section> -->
 
     <section>
       <h3 class=" text-2xl ">Projet en cours</h3> 
@@ -109,13 +113,13 @@ const applications = [
       </article>
     </section>
 
-    <section>
+    <section class="mt-16 " >
       <h4 class=" text-2xl ">Projets d'entreprises</h4> 
       <br>
       <ul class="gap-10 grid grid-flow-col overflow-auto" >
         {
           applications.map( app => {
-            return <Card className={ app.className } >
+            return <Card className={ app.className } link={app.link} >
               <p class="text-cyan-50 text-opacity-90" slot="title" >{ app.title }</p>
               <p class=" font-semibold text-opacity-90 text-white" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
             </Card>
