@@ -10,7 +10,7 @@ interface Props {
 const { className, link } = Astro.props;
 ---
 
-<li class=`w-60 p-4 h-96 rounded shadow-xl flex flex-col justify-between ${className}` >
+<li class=`w-64 p-4 h-96 rounded shadow-xl flex flex-col justify-between ${className}` >
   <header>
     <p class="text-cyan-50 text-opacity-90 "><slot name="title" /></p>
     <p class=" font-semibold text-opacity-90 text-white" ><slot name="role" /></p>

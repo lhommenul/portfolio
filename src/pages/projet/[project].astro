@@ -1,0 +1,92 @@
+---
+import ProjectLayout from '../../layouts/Project.astro';
+import {ViewTransitions} from 'astro:transitions';
+
+const { project : projectName } = Astro.params;
+
+import projectsDescriptions from "../../data/enterprise/projectsDescriptions.json";
+
+const currentProject = projectsDescriptions.find( project => project.href === projectName )
+console.log(currentProject);
+
+
+export async function getStaticPaths() {
+  const pages = [
+    {
+      project : "karyo-admin",
+      title : "Karyo - Admin",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "karyo-acteur",
+      title : "Karyo - Acteur",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "karyo-nowwhat",
+      title : "NowWhat",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "karyo-beta",
+      title : "Karyo - Beta",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "api-v1",
+      title : "Improvize - V1",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "karyo-v1",
+      title : "Karyo - V1",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "karyo-lib",
+      title : "Librairie Improvize",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      project : "showcase",
+      title : "Improvize",
+      text: "Welcome to the Astro store!",
+    }
+  ];
+  return pages.map(({ project, title, text }) => {
+    return {
+      params: { project },
+      props: { title, text },
+    };
+  });
+}
+
+---
+{ 
+  !currentProject ? 
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <ViewTransitions />
+  </head>
+  <ProjectLayout title={`404 ${projectName}`}  >
+
+      <h1 class="font-semibold text-4xl text-center" >404 {projectName}</h1>
+
+  </ProjectLayout>
+  :
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <ViewTransitions />
+  </head>
+  <ProjectLayout title={`Projet ${projectName}`}  >
+    
+
+      LOG
+
+    
+  </ProjectLayout>
+}
