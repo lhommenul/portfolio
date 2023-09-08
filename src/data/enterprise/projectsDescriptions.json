@@ -1,89 +1,89 @@
 [
   {
-    "href": "/projet/karyo-admin",
+    "name": "karyo-admin",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/karyo-acteur",
+    "name": "karyo-acteur",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/karyo-nowwhat",
+    "name": "karyo-nowwhat",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/karyo-beta",
+    "name": "karyo-beta",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/api-v1",
+    "name": "api-v1",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/karyo-v1",
+    "name": "karyo-v1",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/karyo-lib",
+    "name": "karyo-lib",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   },
   {
-    "href": "/projet/showcase",
+    "name": "showcase",
     "sections" : [
       {
-        "img" : { "href" : "", "alt" : "", "ariaLabel" : "" },
+        "img" : { "src" : "https://picsum.photos/200", "alt" : "", "ariaLabel" : "" },
         "title" : "TITLE ",
         "subTitile" : "Sub title",
-        "description" : "lorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem"
+        "description" : "Using this approach, you can include dynamic values that are calculated in the frontmatter. But once included, these values are not reactive and will never change. Astro components are templates that only run once, during the rendering step."
       }
     ]
   }

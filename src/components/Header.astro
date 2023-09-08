@@ -6,12 +6,12 @@
 // const { className } = Astro.props;
 const mainPagesLinks = [
   {
-    href : "/projets",
-    label : "Projets"
-  },
-  {
     href : "/",
     label : "Accueil"
+  },
+  {
+    href : "/projets",
+    label : "Projets"
   },
   {
     href : "/a-propos",
@@ -24,7 +24,7 @@ const mainPagesLinks = [
 
   <h1 class="self-center font-sans font-medium text-xl">Antoine Jézéquel</h1>
 
-  <ul class=" flex flex-row gap-3 h-full align-middle justify-end" >
+  <ul class=" flex flex-row gap-8 h-full align-middle justify-end" >
     {
       mainPagesLinks.map( link => {
         return <li class="flex items-center justify-center" >
