@@ -85,7 +85,7 @@ export async function getStaticPaths() {
   <ProjectLayout title={`Projet ${currentProject.name}`}  >
     
     <section class="h-fit bg-gradient-to-l from-indigo-50 px-20 py-20" >
-      <div class="container" >
+      <div class="container mx-auto" >
         <h1 class="font-semibold text-3xl mb-6" >{ currentProject.name?.toUpperCase() }</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum delectus aliquid debitis voluptas, totam, necessitatibus ut explicabo minus inventore eum autem temporibus eveniet officia sequi laboriosam commodi omnis quasi nobis.</p>
       </div>
@@ -95,7 +95,7 @@ export async function getStaticPaths() {
       currentProject.sections.map( ( section , index ) => {
 
         return <section class="h-fit px-20 py-20" >
-          <article class="container flex flex-row gap-8" >
+          <article class="container mx-auto flex flex-row gap-8" >
             <img src={section.img.src} alt={section.img.alt} aria-label={ section.img.ariaLabel } class="rounded" >
             <div>
               <p class="mb-1 text-xl font-semibold" >{ section.title }</p>
@@ -103,7 +103,8 @@ export async function getStaticPaths() {
               <p>{ section.description }</p>
             </div>
           </article>
-        </section>
+        </section> 
+        <hr class="w-72 mx-auto" >
 
       })
     }
