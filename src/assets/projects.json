@@ -1,0 +1,154 @@
+[
+  {
+    "applicationName": "Karyo Admin - Beta",
+    "className": "bg-red-500",
+    "description": "Developpement de l'application ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : [
+        "Vue 3 ( option api ) ", 
+        "Axios" , 
+        "Vuex" , 
+        "Primevue" , 
+        "Sass" , 
+        "Docker"
+      ],
+      "goal" : "Récupération des documents provenant ( génération ) des logiciels existants ( LeSage, Inpro, Aïda ) proposés par l'entreprise. Mise à disposition de ces documents.BtoB Plateforme de partage de documents entre groupes d'utilisateurs. ",
+      "features" : [
+        "Gestion de droits d'utilisateurs ( création , modification etc ...)",
+        "Création de groupes, utilisateurs",
+        "Gestion des fichiers ( livraison, validation, refus etc ... )",
+        "Création de templates de mail comme ( Mailchimp )",
+        "Utilisateur multicomptes",
+        "Assistance ( Inception )"
+      ],
+      "targets" : ["Maisons d'édition"]
+    }
+   },
+  {
+    "applicationName": "Karyo Acteur - Beta",
+    "className": "bg-red-500",
+    "description": "Developpement de l'application ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : [
+        "Vue 3 ( option api ) "," Axios "," Vuex "," Primevue"," Sass"," Docker"
+      ],
+      "goal" : "Interface de récupération et de dépot de documents à destination des clients finaux. BtoC Rendre les documents disponibles pour les clients finaux afin de les visualiser ou de les retourner à leurs gestionnaires ( validation / refus depuis l'interface web ).",
+      "features" : [
+        "Télécharment",
+        "Supp",
+        "Multicomptes"
+      ],
+      "targets" : [
+        "Clients des Maisons d'édition"
+      ]
+    }
+   },
+  {
+    "applicationName": "Karyo API - Beta",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : [
+        "Node js", "Fastify ( http frarmework )", "Swagger ( documentation api )", "Redis"
+      ],
+      "goal" : "Communication entre la base de données ( Karyo ) et/ou les bases de données des logiciels ( LeSage, Inpro ) et les applications front ( __karyo-acteur-beta__, __karyo-admin-beta__ ).",
+      "features" : [
+        "Gestion des crons ( emails, statistiques )",
+        "Authentification basée sur les Bearer."
+      ],
+      "targets" : [
+        "Utilisateurs du service Karyo."
+      ]
+    }
+   },
+   {
+    "applicationName": "Karyo API - V1",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : [
+        "Deno","Oak ( framework )","Redis"
+      ],
+      "goal" : "Création d'une passerelle entre __karyo-api-beta__ et __karyo-api-v1__",
+      "features" : [
+        "Nouvelle communication entre les logciels et les logiciels web afin de recuperer les fiches acteurs ( coordonnéees pro et perso )"
+      ],
+      "targets" : [
+        "Utilisateurs du service Karyo Beta et V1"
+      ]
+    }
+   },
+   {
+    "applicationName": "Karyo Database - BETA",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : ["Postgresql"],
+      "goal" : "Gerer les données concernant les applications ( __karyo-acteur-beta__, __karyo-admin-beta__ ).",
+      "features" : ["Gestion des des droits des utilisateurs","groupes de manière récursive."],
+      "targets" : ["API Karyo","Le Sage","Inpro"]
+    }
+   },
+   {
+    "applicationName": "Karyo Database - V1",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : ["Postgresql"],
+      "goal" : "",
+      "features" : [],
+      "targets" : ["Karyo API - V1"]
+    }
+   },
+  {
+    "applicationName": "Karyo Acteur - V1",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : ["Vue js","Axios","Vuex","Primevue"],
+      "goal" : "Appliquer la nouvelle direction artistique.",
+      "features" : [
+        "Nouvelle interface graphique",
+        "Nouvelle datatable ( implementation de la librairie Improvize )",
+        "Interface profil utilisateur."
+      ],
+      "targets" : []
+    }
+   },
+  {
+    "applicationName": "GLOBAL LIB",
+    "className": "bg-red-500",
+    "description": "Developpement de l'API ",
+    "title": "Improvize",
+    "informations" : {
+      "stack" : ["Vue js","StoryBook"],
+      "goal" : "Création de composants scalables à destination des logiciels web.",
+      "features" : [
+        "Support de grande quantitée de données",
+        "Documentation"
+      ],
+      "targets" : []
+    }
+   },
+   {
+     "applicationName": "SHOWCASE",
+     "className": "bg-red-500",
+     "description": "Developpement de l'API ",
+     "title": "Improvize",
+     "informations" : {
+       "stack" : ["Nuxt 3 js","Strapi","i18n","Js Report","Pinia"],
+       "goal" : "Promotion des produits proposés par l'entreprise improvize, appliquer la nouvelle direction artitstique.",
+       "features" : [
+         "Generation des devis ( Js Report )"
+       ],
+       "targets" : []
+     }
+    }
+]

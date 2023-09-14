@@ -1,0 +1,26 @@
+---
+import ProjectLayout from '../layouts/Project.astro';
+import {ViewTransitions} from 'astro:transitions';
+
+const { project : projectName } = Astro.params;
+
+import projectsDescriptions from "../assets/projectsDescriptions.json";
+
+---
+  <head> 
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <ViewTransitions />
+  </head>
+  <ProjectLayout title={`Projet `}  >
+    
+    <section class="h-fit bg-gradient-to-l from-indigo-50 px-20 py-20" >
+      <div class="container mx-auto" >
+        <h1 class="font-semibold text-3xl mb-6" ></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum delectus aliquid debitis voluptas, totam, necessitatibus ut explicabo minus inventore eum autem temporibus eveniet officia sequi laboriosam commodi omnis quasi nobis.</p>
+      </div>
+    </section>
+
+  </ProjectLayout>
+}
