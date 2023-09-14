@@ -4,6 +4,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'application ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : [
         "Vue 3 ( option api ) ", 
@@ -30,6 +31,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'application ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : [
         "Vue 3 ( option api ) "," Axios "," Vuex "," Primevue"," Sass"," Docker"
@@ -50,6 +52,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : [
         "Node js", "Fastify ( http frarmework )", "Swagger ( documentation api )", "Redis"
@@ -69,6 +72,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : [
         "Deno","Oak ( framework )","Redis"
@@ -87,6 +91,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : ["Postgresql"],
       "goal" : "Gerer les données concernant les applications ( __karyo-acteur-beta__, __karyo-admin-beta__ ).",
@@ -99,6 +104,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : ["Postgresql"],
       "goal" : "",
@@ -111,6 +117,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : ["Vue js","Axios","Vuex","Primevue"],
       "goal" : "Appliquer la nouvelle direction artistique.",
@@ -127,6 +134,7 @@
     "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
+    "link" : "#description",
     "informations" : {
       "stack" : ["Vue js","StoryBook"],
       "goal" : "Création de composants scalables à destination des logiciels web.",
@@ -142,6 +150,7 @@
      "className": "bg-red-500",
      "description": "Developpement de l'API ",
      "title": "Improvize",
+     "link" : "#description",
      "informations" : {
        "stack" : ["Nuxt 3 js","Strapi","i18n","Js Report","Pinia"],
        "goal" : "Promotion des produits proposés par l'entreprise improvize, appliquer la nouvelle direction artitstique.",
@@ -150,5 +159,25 @@
        ],
        "targets" : []
      }
-    }
+    },
+    {
+      "applicationName": "PCM",
+      "className": "bg-red-500",
+      "description": "Developpement de l'application pcm",
+      "title": "Improvize",
+      "link" : "#description",
+      "informations" : {
+        "stack" : ["Nuxt 3 js","Pinia","Postgresql","Node js"],
+        "goal" : "Permettre à des utilisateurs d'effectuer des depos de candidatures. Avoir un systeme de votes par catégories",
+        "features" : [
+          "Espace d'administration",
+          "Espace de vote",
+          "Espace de depos de candidatures"
+        ],
+        "targets" : [
+          "L'association CSDEM",
+          "Les addérants de l'association"
+        ]
+      }
+     }
 ]

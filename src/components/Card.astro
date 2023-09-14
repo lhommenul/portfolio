@@ -1,19 +1,16 @@
 ---
 interface Props {
 	className: string;
-  link: {
-    href : string;
-    label : string;
-  };
+  link: string;
 }
 
 const { className, link } = Astro.props;
 ---
 
 <li class=`w-64 p-4 h-96 rounded shadow-xl flex flex-col justify-between ${className}` >
-  <header>
-    <p class="text-cyan-50 text-opacity-90 "><slot name="title" /></p>
-    <p class=" font-semibold text-opacity-90 text-white" ><slot name="role" /></p>
+  <header class=" text-zinc-800" >
+    <p class="text-zinc-800 "><slot name="title" /></p>
+    <p class=" font-semibold text-zinc-800" ><slot name="role" /></p>
   </header>
-  <a class=" bg-gray-950 bg-opacity-80 rounded px-2 py-1 text-cyan-50 self-start hover:bg-opacity-70" href={ link.href } >Voir Plus</a>
+  <a class=" bg-gray-950 bg-opacity-80 rounded px-2 py-1 text-cyan-50 self-start hover:bg-opacity-70" href={ link } >Voir Plus</a>
 </li>
