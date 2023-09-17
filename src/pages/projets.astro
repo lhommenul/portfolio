@@ -57,7 +57,7 @@ import projects from "../assets/projects.json";
             <ul class="flex flex-col" >
               {
                 project.informations.stack.map( techno => {
-                  return <li>• <a href={techno.link} class="underline" >{techno.name}</a> </li>
+                  return <li>• <a target="_blank" href={techno.link} class="underline" >{techno.name}</a> </li>
                 })
               }
             </ul>
