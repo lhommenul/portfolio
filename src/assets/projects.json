@@ -1,7 +1,6 @@
 [
   {
     "applicationName": "Karyo Admin - Beta",
-    "className": "bg-red-500",
     "description": "Developpement de l'application ",
     "title": "Improvize",
     "link" : "#description",
@@ -28,7 +27,6 @@
    },
   {
     "applicationName": "Karyo Acteur - Beta",
-    "className": "bg-red-500",
     "description": "Developpement de l'application ",
     "title": "Improvize",
     "link" : "#description",
@@ -49,7 +47,6 @@
    },
   {
     "applicationName": "Karyo API - Beta",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -69,7 +66,6 @@
    },
    {
     "applicationName": "Karyo API - V1",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -88,7 +84,6 @@
    },
    {
     "applicationName": "Karyo Database - BETA",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -101,7 +96,6 @@
    },
    {
     "applicationName": "Karyo Database - V1",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -114,7 +108,6 @@
    },
   {
     "applicationName": "Karyo Acteur - V1",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -131,7 +124,6 @@
    },
   {
     "applicationName": "GLOBAL LIB",
-    "className": "bg-red-500",
     "description": "Developpement de l'API ",
     "title": "Improvize",
     "link" : "#description",
@@ -147,7 +139,6 @@
    },
    {
      "applicationName": "SHOWCASE",
-     "className": "bg-red-500",
      "description": "Developpement de l'API ",
      "title": "Improvize",
      "link" : "#description",
@@ -162,7 +153,6 @@
     },
     {
       "applicationName": "PCM",
-      "className": "bg-red-500",
       "description": "Developpement de l'application pcm",
       "title": "Improvize",
       "link" : "#description",

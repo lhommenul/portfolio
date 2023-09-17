@@ -5,6 +5,17 @@ import {ViewTransitions} from 'astro:transitions';
 
 import enterpriseProjects from "../assets/projects.json";
 
+function cardColorPicker( index : number ) : string {
+
+  if ( index % 2 === 0 ) return 'bg-slate-200'
+  
+  
+  
+  
+  return ''
+  
+}
+
 ---
 <head>
   <meta charset='UTF-8'>
@@ -25,8 +36,8 @@ import enterpriseProjects from "../assets/projects.json";
       <br>
       <article class="rounded h-80 bg-gradient-to-l from-indigo-50 py-2 flex flex-row" >
         <img class=" max-h-full" src="https://cdn.dribbble.com/users/1756963/screenshots/16199327/media/2574545a2a10397d6bb43b8001ecc585.png" alt="">
-        <div class="flex flex-col ml-2" >
-          <p class=" font-mono text-xl h-6 font-semibold" ><strong>MyShort</strong></p>
+        <div class="flex flex-col ml-10" >
+          <p class=" font-mono text-xl h-6 font-semibold mb-4" ><strong>MyShort</strong></p>
           <p class=" font-light text-base" >
             Application communautaire basée sur l'échange de données sur des produits. <br>
             Elle à pour objectif de founir des images, vidéos, documents ... permettant l'entretient et la réparation de produits éléctroménagés, vehicules etc ... .
@@ -36,19 +47,24 @@ import enterpriseProjects from "../assets/projects.json";
       </article>
     </section>
 
-    <section class="mt-16 " >
+    <section class="mt-16" >
       <h4 class=" text-2xl ">Projets d'entreprises</h4> 
       <br>
-      <ul class="gap-10 grid grid-flow-col overflow-auto" >
-        {
-          enterpriseProjects.map( app => {
-            return <Card className={ app.className } link={app.link} >
-              <p class="text-cyan-50 text-opacity-90" slot="title" >{ app.title }</p>
-              <p class=" font-semibold text-opacity-90 text-white" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
-            </Card>
-          })
-        }
-      </ul>
+      <div class="grid grid-cols-1 grid-rows-1 group w-full group " >
+        <div class=" row-start-1 row-end-2 col-span-full w-full flex flex-row justify-center h-full items-center opacity-0 group-focus-within:opacity-100  group-hover:opacity-100 z-10" >
+          <a class=" outline-none cursor-pointer w-4/12 max-w-lg p-4 bg-indigo-200 rounded text-center text-lg hover:shadow-inner-sm transition-all shadow-inner hover:scale-105" href="/projets" >Voir les projets</a>
+        </div>
+        <ul class="gap-10 grid grid-flow-col overflow-hidden py-4 group-hover:opacity-20 group-focus-within:opacity-20 row-start-1 row-end-2 col-span-full z-0" >
+          {
+            enterpriseProjects.map( ( app, index) => {
+              return <Card className={ cardColorPicker(index) } link={app.link} >
+                <p class="  " slot="title" >{ app.title }</p>
+                <p class="" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
+                </Card>
+              })
+            }
+        </ul>
+      </div>
     </section>
 
   </main>
