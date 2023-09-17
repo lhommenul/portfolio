@@ -30,7 +30,7 @@ import projects from "../assets/projects.json";
     <ul class="flex flex-col gap-28 z-10" >
       {
         projects.map( project => {
-          return <li class="p-8 flex flex-col even:bg-slate-50 rounded shadow-2xl shadow-slate-300" >
+          return <li class="p-8 flex flex-col even:bg-slate-50 shadow-2xl shadow-slate-300" >
             <p class="text-xl" ><span class=" font-semibold" >Nom : </span> { project.applicationName } </p>
             <br>
             <p>{ project.informations.goal }</p>

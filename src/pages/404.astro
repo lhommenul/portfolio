@@ -1,0 +1,19 @@
+---
+import DefaultLayout from '../layouts/Default.astro';
+import {ViewTransitions} from 'astro:transitions';
+---
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <ViewTransitions />
+</head>
+
+<DefaultLayout title="Accueil - Antoine Jézéquel">
+	<main class="flex flex-col items-center justify-center ">
+
+    <h1 class=" text-center text-9xl mb-8" >404</h1>
+    <a href="/" class="mx-auto underline hover:scale-105 focus:scale-105 px-8 py-8 flex justify-center content-center rounded-xl items-center" >Retour à l'accueil</a>
+
+  </main>
+</DefaultLayout>
