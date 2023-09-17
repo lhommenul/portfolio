@@ -1,0 +1,26 @@
+---
+import DefaultLayout from '../layouts/Default.astro';
+import {ViewTransitions} from 'astro:transitions';
+
+
+---
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <ViewTransitions />
+</head>
+
+<DefaultLayout title="Accueil - Antoine Jézéquel">
+	<main class="ml-10 mt-16 h-screen">
+
+    <div class="container flex flex-row flex-wrap h-fit mx-auto w-fit" >
+      <img src="/projets/contact.png" alt="contact image">
+      <div class="p-10 flex flex-col gap-4" >
+        <p class="text-2xl" >Antoine Jézéquel</p>
+        <a class=" underline" href="mailto:antoinejezequel1998@gmail.com" >antoinejezequel1998@gmail.com</a>
+      </div>
+    </div>
+
+  </main>
+</DefaultLayout>

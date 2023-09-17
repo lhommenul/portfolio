@@ -4,23 +4,68 @@ import {ViewTransitions} from 'astro:transitions';
 
 const { project : projectName } = Astro.params;
 
-import projectsDescriptions from "../assets/projectsDescriptions.json";
+import projects from "../assets/projects.json";
 
 ---
-  <head> 
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <ViewTransitions />
-  </head>
-  <ProjectLayout title={`Projet `}  >
-    
-    <section class="h-fit bg-gradient-to-l from-indigo-50 px-20 py-20" >
-      <div class="container mx-auto" >
-        <h1 class="font-semibold text-3xl mb-6" ></h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum delectus aliquid debitis voluptas, totam, necessitatibus ut explicabo minus inventore eum autem temporibus eveniet officia sequi laboriosam commodi omnis quasi nobis.</p>
-      </div>
-    </section>
+<head> 
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <ViewTransitions />
+</head>
+<ProjectLayout title={`Projet `}  >
+  
+  <section class="h-fit bg-gradient-to-l from-indigo-50 py-20" >
+    <div class="container mx-auto" >
+      <h1 class="font-semibold text-3xl mb-6" >Projets</h1>
+      <h2>
+        Voici la liste de mes projets. Ils ne sont pas tous répertoriés sur cette page en raison du manque de temps, mais j'essaie de la tenir à jour.
+      </h2>
+    </div>
+  </section>
 
-  </ProjectLayout>
-}
+
+  <section class="container mx-auto mt-28 flex flex-col" >
+
+    <ul class="flex flex-col gap-28 z-10" >
+      {
+        projects.map( project => {
+          return <li class="p-4 flex flex-col bg-slate-50 rounded" >
+            <p class="text-lg" ><span class=" font-semibold" >Nom : </span> { project.applicationName } </p>
+            <br>
+            <p>{ project.informations.goal }</p>
+            <br>
+            <span class=" font-semibold" >Features : </span>
+            <ul class="flex flex-col" >
+              {
+                project.informations.features.map( feature => {
+                  return <li>{feature}</li>
+                })
+              }
+            </ul>
+            <br>
+            <span class=" font-semibold" >Utilisateurs : </span>
+            <ul class="flex flex-col" >
+              {
+                project.informations.targets.map( target => {
+                  return <li>{target}</li>
+                })
+              }
+            </ul>
+            <br>
+            <span class=" font-semibold" >Stack : </span>
+            <ul class="flex flex-col" >
+              {
+                project.informations.stack.map( techno => {
+                  return <li>• <a href={techno.link} class="underline" >{techno.name}</a> </li>
+                })
+              }
+            </ul>
+          </li>
+        })
+      }
+    </ul>
+
+  </section>
+
+</ProjectLayout>

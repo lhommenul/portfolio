@@ -5,17 +5,21 @@ import {ViewTransitions} from 'astro:transitions';
 
 import enterpriseProjects from "../assets/projects.json";
 
-function cardColorPicker( index : number ) : string {
+function cardColor( index : number ) : string {
 
   if ( index % 2 === 0 ) return 'bg-slate-200'
-  
-  
-  
   
   return ''
   
 }
 
+function textColor( index : number ) : string {
+
+if ( index % 2 === 0 ) return ''
+
+return 'text-slate-700'
+
+}
 ---
 <head>
   <meta charset='UTF-8'>
@@ -36,14 +40,23 @@ function cardColorPicker( index : number ) : string {
       <br>
       <article class="rounded h-80 bg-gradient-to-l from-indigo-50 py-2 flex flex-row" >
         <img class=" max-h-full" src="https://cdn.dribbble.com/users/1756963/screenshots/16199327/media/2574545a2a10397d6bb43b8001ecc585.png" alt="">
-        <div class="flex flex-col ml-10" >
-          <p class=" font-mono text-xl h-6 font-semibold mb-4" ><strong>MyShort</strong></p>
+        <div class="flex flex-col ml-10 px-10 py-6" >
+          <p class=" font-mono text-xl h-6 mb-4" ><strong>DocMe</strong></p>
           <p class=" font-light text-base" >
             Application communautaire basée sur l'échange de données sur des produits. <br>
-            Elle à pour objectif de founir des images, vidéos, documents ... permettant l'entretient et la réparation de produits éléctroménagés, vehicules etc ... .
+            Elle a pour objectif de fournir des images, vidéos, documents... permettant l'entretien et la réparation de produits électroménagers, véhicules, etc.<br>
+            De plus, un espace pour les professionnels et particuliers vendant des pièces sera mis en place.
           </p>
+          <div class="flex flex-col mt-auto" >
+            <span class=" font-semibold" >Stack : </span>
+            <ul>
+              <li><a href="">Bun</a></li>
+              <li><a href="">Nuxt 3</a></li>
+              <li><a href="">Postgresql </a></li>
+            </ul>
+          </div>
         </div>
-        <button class="py-2 px-2 underline opacity-20 ">Intéressé par le projet ? <br> Voir Plus</button>
+        <!-- <button class="py-2 px-2 underline opacity-20 ">Intéressé par le projet ? <br> Voir Plus</button> -->
       </article>
     </section>
 
@@ -57,9 +70,8 @@ function cardColorPicker( index : number ) : string {
         <ul class="gap-10 grid grid-flow-col overflow-hidden py-4 group-hover:opacity-20 group-focus-within:opacity-20 row-start-1 row-end-2 col-span-full z-0" >
           {
             enterpriseProjects.map( ( app, index) => {
-              return <Card className={ cardColorPicker(index) } link={app.link} >
-                <p class="  " slot="title" >{ app.title }</p>
-                <p class="" slot="role" >{ app.description }<strong>{ app.applicationName }</strong></p>
+              return <Card className={ cardColor(index) } link={app.link} >
+                <p class={`text-9xl opacity-60 ${textColor(index)}`} slot="title" >{ app.applicationName }</p>
                 </Card>
               })
             }

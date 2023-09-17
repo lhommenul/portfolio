@@ -6,12 +6,12 @@
     "link" : "#description",
     "informations" : {
       "stack" : [
-        "Vue 3 ( option api ) ", 
-        "Axios" , 
-        "Vuex" , 
-        "Primevue" , 
-        "Sass" , 
-        "Docker"
+        { "name" : "Vue 3 ( option api ) ", "link" : "https://vuejs.org/"}, 
+        { "name" :"Axios" , "link" : "https://axios-http.com/fr/docs/intro"},
+        { "name" :"Vuex" , "link" : "https://vuex.vuejs.org/"},
+        { "name" :"Primevue" , "link" : "https://primevue.org/"},
+        { "name" :"Sass" , "link" : "https://sass-lang.com/"},
+        { "name" :"Docker", "link" : "https://www.docker.com/"}
       ],
       "goal" : "Récupération des documents provenant ( génération ) des logiciels existants ( LeSage, Inpro, Aïda ) proposés par l'entreprise. Mise à disposition de ces documents.BtoB Plateforme de partage de documents entre groupes d'utilisateurs. ",
       "features" : [
@@ -32,7 +32,12 @@
     "link" : "#description",
     "informations" : {
       "stack" : [
-        "Vue 3 ( option api ) "," Axios "," Vuex "," Primevue"," Sass"," Docker"
+        { "name" : "Vue 3 ( option api ) ", "link" : "https://vuejs.org/"}, 
+        { "name" :"Axios" , "link" : "https://axios-http.com/fr/docs/intro"},
+        { "name" :"Vuex" , "link" : "https://vuex.vuejs.org/"},
+        { "name" :"Primevue" , "link" : "https://primevue.org/"},
+        { "name" :"Sass" , "link" : "https://sass-lang.com/"},
+        { "name" :"Docker", "link" : "https://www.docker.com/"}
       ],
       "goal" : "Interface de récupération et de dépot de documents à destination des clients finaux. BtoC Rendre les documents disponibles pour les clients finaux afin de les visualiser ou de les retourner à leurs gestionnaires ( validation / refus depuis l'interface web ).",
       "features" : [
@@ -52,7 +57,10 @@
     "link" : "#description",
     "informations" : {
       "stack" : [
-        "Node js", "Fastify ( http frarmework )", "Swagger ( documentation api )", "Redis"
+        { "name" : "Node js", "link" : "https://nodejs.org/en"}, 
+        { "name" : "Fastify", "link" : "https://fastify.dev/"}, 
+        { "name" : "Swagger", "link" : "https://swagger.io/"}, 
+        { "name" : "Redis", "link" : "https://redis.io/"}
       ],
       "goal" : "Communication entre la base de données ( Karyo ) et/ou les bases de données des logiciels ( LeSage, Inpro ) et les applications front ( __karyo-acteur-beta__, __karyo-admin-beta__ ).",
       "features" : [
@@ -71,7 +79,9 @@
     "link" : "#description",
     "informations" : {
       "stack" : [
-        "Deno","Oak ( framework )","Redis"
+        { "name" : "Deno", "link" : "https://deno.com/"},
+        { "name" : "Oak", "link" : "https://oakserver.github.io/oak/"},
+        { "name" : "Redis", "link" : "https://redis.io/"}
       ],
       "goal" : "Création d'une passerelle entre __karyo-api-beta__ et __karyo-api-v1__",
       "features" : [
@@ -88,7 +98,7 @@
     "title": "Improvize",
     "link" : "#description",
     "informations" : {
-      "stack" : ["Postgresql"],
+      "stack" : [{"name" : "Postgresql", "link" : "https://www.postgresql.org/"}],
       "goal" : "Gerer les données concernant les applications ( __karyo-acteur-beta__, __karyo-admin-beta__ ).",
       "features" : ["Gestion des des droits des utilisateurs","groupes de manière récursive."],
       "targets" : ["API Karyo","Le Sage","Inpro"]
@@ -100,7 +110,7 @@
     "title": "Improvize",
     "link" : "#description",
     "informations" : {
-      "stack" : ["Postgresql"],
+      "stack" : [{"name" : "Postgresql", "link" : "https://www.postgresql.org/"}],
       "goal" : "",
       "features" : [],
       "targets" : ["Karyo API - V1"]
@@ -112,7 +122,12 @@
     "title": "Improvize",
     "link" : "#description",
     "informations" : {
-      "stack" : ["Vue js","Axios","Vuex","Primevue"],
+      "stack" : [
+        {"name" : "Vue js", "link" : "https://vuejs.org/"},
+        {"name" : "Nuxt 3", "link" : "https://nuxt.com/"},
+        {"name" : "Pinia", "link" : "https://pinia.vuejs.org/"},
+        {"name" : "Primevue", "link" : "https://primevue.org/"}
+      ],
       "goal" : "Appliquer la nouvelle direction artistique.",
       "features" : [
         "Nouvelle interface graphique",
@@ -128,7 +143,10 @@
     "title": "Improvize",
     "link" : "#description",
     "informations" : {
-      "stack" : ["Vue js","StoryBook"],
+      "stack" : [
+        {"name" : "Vue js", "link" : "https://vuejs.org/"},
+        {"name" : "StoryBook", "link" : "https://storybook.js.org/"}
+      ],
       "goal" : "Création de composants scalables à destination des logiciels web.",
       "features" : [
         "Support de grande quantitée de données",
@@ -143,7 +161,13 @@
      "title": "Improvize",
      "link" : "#description",
      "informations" : {
-       "stack" : ["Nuxt 3 js","Strapi","i18n","Js Report","Pinia"],
+       "stack" : [
+        {"name" : "Vue js", "link" : "https://vuejs.org/"},
+        {"name" : "Nuxt 3", "link" : "https://nuxt.com/"},
+        {"name" : "Pinia", "link" : "https://pinia.vuejs.org/"},
+        {"name" : "Js Report", "link" : "https://jsreport.net/"},
+        {"name" : "Strapi", "link" : "https://strapi.io/"}
+      ],
        "goal" : "Promotion des produits proposés par l'entreprise improvize, appliquer la nouvelle direction artitstique.",
        "features" : [
          "Generation des devis ( Js Report )"
@@ -157,7 +181,13 @@
       "title": "Improvize",
       "link" : "#description",
       "informations" : {
-        "stack" : ["Nuxt 3 js","Pinia","Postgresql","Node js"],
+        "stack" : [
+          {"name" : "Vue js", "link" : "https://vuejs.org/"},
+          {"name" : "Nuxt 3", "link" : "https://nuxt.com/"},
+          {"name" : "Pinia", "link" : "https://pinia.vuejs.org/"},
+          {"name" : "Postgresql", "link" : "https://www.postgresql.org/"},
+          { "name" : "Node js", "link" : "https://nodejs.org/en"}
+        ],
         "goal" : "Permettre à des utilisateurs d'effectuer des depos de candidatures. Avoir un systeme de votes par catégories",
         "features" : [
           "Espace d'administration",
