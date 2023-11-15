@@ -1,0 +1,76 @@
+---
+import ProjectLayout from '../layouts/Project.astro';
+import {ViewTransitions} from 'astro:transitions';
+
+const idees = [
+    {
+        title : 'Pneu arrière pour mon vélo',
+        img : '',
+        description : ''
+    },
+    {
+        title : 'Une coque pour mon téléphone Pixel 4a (4G)',
+        img : '',
+        description : `Parce que ça fait trois fois que j'explose l'écran :O`
+    },
+    {
+        title : 'Des cales-pieds pour mon vélo',
+        img : '',
+        description : ``
+    },
+    {
+        title : 'Une sonnette pour mon vélo',
+        img : '',
+        description : ``
+    },
+    {
+        title : 'Des assiettes creuses assez grandes',
+        img : '',
+        description : `exemple : https://www.ikea.com/fr/fr/p/faergklar-assiette-creuse-brillant-beige-50479635/`
+    },
+    {
+        title : "Un dongle USB (que j'ai perdu) pour ma souris Logitech",
+        img : '',
+        description : `exemple : https://www.logitech.com/fr-fr/products/mice/unifying-receiver-usb.910-005236.html`
+    },
+]
+
+
+---
+<head> 
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <ViewTransitions />
+</head>
+<ProjectLayout title={`Projet `}  >
+  
+  <section class="h-fit bg-gradient-to-l from-indigo-50 py-20" >
+    <div class="container mx-auto" >
+      <h1 class="font-semibold text-3xl mb-6" >Idées cadeaux ( utiles )</h1>
+      <h2>
+        Voici ma liste d'idées d'objets, etc., qui me viennent à l'esprit et qui me feraient plaisir :)      
+      </h2>
+    </div>
+  </section>
+
+
+  <section class="container mx-auto mt-28 flex flex-col" >
+
+    <ul class="flex flex-col gap-9 z-10" >
+        {
+            idees.map( idee => {
+                return <li class="border-solid border-l-2 border-indigo-200 odd:border-indigo-300 pl-4 gap-4 flex flex-row" > 
+                    <img src={idee.img} />
+                    <div>
+                        <p class="text-lg" >{ idee.title }</p>
+                        <p class="text-sm text-gray-700" >{ idee.description }</p>
+                    </div>
+                </li>
+            })
+        }
+    </ul>
+
+  </section>
+
+</ProjectLayout>
