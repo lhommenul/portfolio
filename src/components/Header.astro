@@ -18,22 +18,107 @@ const mainPagesLinks = [
     label : "A Propos"
   }
 ]
+
+
 ---
 
-<header class=" bg-slate-400 bg-opacity-10 w-full h-20 flex flex-row justify-between px-8">
+<header class=" bg-slate-400 bg-opacity-10 w-full h-20 flex flex-row justify-between px-8" id="header" >
 
   <div  class="flex flex-row justify-center gap-4" >
     <img src="/projets/me.svg" class="h-5/6 self-center" alt="">
     <h1 class="self-center font-sans font-medium text-xl">Antoine Jézéquel</h1>
   </div>
 
-  <ul class=" flex flex-row gap-8 h-full align-middle justify-end" >
+  <button type="button" id="menu-button" class="sm:hidden" >
+    <svg height="40px" widht="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#000000"  stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <ul class="sm:flex sm:flex-row sm:gap-8 sm:h-full sm:align-middle sm:justify-end hidden" id="menu" >
+
+    <button type="button" id="close-menu-button" class="sm:hidden fixed top-20 right-20 text-2xl font-semibold" >X</button>
     {
       mainPagesLinks.map( link => {
-        return <li class="flex items-center justify-center" >
-          <a href={link.href} class="h-fit font-sans" >{ link.label }</a>
+        return <li class="flex items-center justify-center text-xl" >
+          <a href={link.href} class="h-fit font-sans" class="menu-link" >{ link.label }</a>
         </li> 
       })
     }
   </ul>
 </header>
+
+<script>
+const burgerMenu = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
+const header = document.querySelector('#header');
+const menuLink = document.querySelectorAll('.menu-link');
+const closeMenuButton = document.querySelector('#close-menu-button')
+
+for ( let i = 0; i < menuLink.length; i++ ){
+  menuLink.addEventListener('click',()=>{
+  changeModalState()
+  })
+}
+
+const styleElements = [
+    'fixed','w-screen', 'h-screen', 'bg-gray-50','top-0','bottom-0',
+    'left-0','right-0','z-20','flex','flex-col','items-center',
+    'justify-center','gap-24'
+  ]
+
+
+burgerMenu.addEventListener('click', () => {
+  changeModalState()
+});
+
+let menuIsClose = true;
+
+function changeModalState(){
+  
+  if ( menuIsClose){ // Open menu
+    menu.classList.remove('hidden')
+    for ( let i = 0; i < styleElements.length; i++ ){
+      const className = styleElements[i];
+      menu.classList.add(className)
+    }
+  }
+  else{ // Close menu
+    menu.classList.add('hidden')
+    for ( let i = 0; i < styleElements.length; i++ ){
+      const className = styleElements[i];
+      menu.classList.remove(className)
+    }
+  }
+
+  menuIsClose =! menuIsClose
+
+}
+
+
+closeMenuButton.addEventListener('click',()=>{
+  changeModalState()
+})
+
+window.addEventListener('resize',(e)=>{
+  if ( e.target.innerWidth >= 640 ){
+
+    if ( !menuIsClose) {
+      for ( let i = 0; i < styleElements.length; i++ ){
+        const className = styleElements[i];
+        menu.classList.remove(className)
+      }
+      menuIsClose = true
+
+    }
+
+  }
+  else{
+    console.log(menuIsClose ,!menu.classList.contains('hidden'))
+    if ( menuIsClose && !menu.classList.contains('hidden') ){
+      menu.classList.add('hidden')
+    }
+  }
+
+})
+</script>

@@ -11,27 +11,30 @@ const idees = [
     {
         title : 'Une coque pour mon téléphone Pixel 4a (4G)',
         img : '',
-        description : `Parce que ça fait trois fois que j'explose l'écran :O`
+        description : `
+          Parce que ça fait trois fois que j'explose l'écran :O.
+          J'ai actuellement celle-là : https://imgs.search.brave.com/Ltge1m5S5CnicqHfNzHzT1FIWTJBp9oLZaZGs6ItvAw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/bGVzbnVtZXJpcXVl/cy5jb20vb3B0aW0v/cHJvZHVjdC81Ni81/NjYzMy82ZTU1MDE1/OS1waXhlbC00LWNh/c2VfXzQ1MF80MDAu/anBlZw MAIS c'est de la merde.
+        `
     },
     {
         title : 'Des cales-pieds pour mon vélo',
-        img : '',
-        description : ``
+        img : 'https://imgs.search.brave.com/9S5uE7v70uxVlbgmTRpu5UQNYeRXHyb9Z17PPpiXiz0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE5OGJQc3ZFWEwu/anBn',
+        description : `exemple : https://imgs.search.brave.com/9S5uE7v70uxVlbgmTRpu5UQNYeRXHyb9Z17PPpiXiz0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE5OGJQc3ZFWEwu/anBn`
     },
     {
         title : 'Une sonnette pour mon vélo',
-        img : '',
-        description : ``
+        img : 'https://imgs.search.brave.com/maWsthL6mIMbitdnHAbFg4bpqxc9YhzUnaahVzoV2UU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bGVjeWNsby5jb20v/Y2RuL3Nob3AvcHJv/ZHVjdHMvc29ubmV0/dGUtcG91ci12ZWxv/X2Z1bGxfODkweDg5/MF9jcm9wX2NlbnRl/ci5qcGc_dj0xNjk3/MjQwMTcz',
+        description : `Je n'ai pas de préférences pour le modèle`
     },
     {
         title : 'Des assiettes creuses assez grandes',
-        img : '',
-        description : `exemple : https://www.ikea.com/fr/fr/p/faergklar-assiette-creuse-brillant-beige-50479635/`
+        img : 'https://www.ikea.com/fr/fr/images/products/faergklar-assiette-creuse-brillant-beige__1009812_pe827753_s5.jpg?f=xl',
+        description : `Couleur blanches`
     },
     {
         title : "Un dongle USB (que j'ai perdu) pour ma souris Logitech",
         img : '',
-        description : `exemple : https://www.logitech.com/fr-fr/products/mice/unifying-receiver-usb.910-005236.html`
+        description : `https://www.logitech.com/fr-fr/products/mice/unifying-receiver-usb.910-005236.html`
     },
 ]
 
@@ -61,7 +64,7 @@ const idees = [
         {
             idees.map( idee => {
                 return <li class="border-solid border-l-2 border-indigo-200 odd:border-indigo-300 pl-4 gap-4 flex flex-row" > 
-                    <img src={idee.img} />
+                    <img src={idee.img} class="max-h-20" />
                     <div>
                         <p class="text-lg" >{ idee.title }</p>
                         <p class="text-sm text-gray-700" >{ idee.description }</p>

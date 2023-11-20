@@ -15,9 +15,9 @@ function cardColor( index : number ) : string {
 
 function textColor( index : number ) : string {
 
-if ( index % 2 === 0 ) return ''
+  if ( index % 2 === 0 ) return ''
 
-return 'text-slate-700'
+  return 'text-slate-700'
 
 }
 ---
@@ -29,38 +29,34 @@ return 'text-slate-700'
 </head>
 
 <DefaultLayout title="Accueil - Antoine Jézéquel">
-	<main class="ml-10 mt-16">
+	<main class="ml-10 mt-16 flex flex-col">
 
-    <!-- <section class="h-96" >
-      
-    </section> -->
-
-    <section>
+    <section class="h-fit w-full" >
       <h3 class=" text-2xl ">Projet en cours</h3> 
       <br>
-      <article class="rounded h-80 bg-gradient-to-l from-indigo-50 py-2 flex flex-row" >
-        <img class=" max-h-full" src="https://cdn.dribbble.com/users/1756963/screenshots/16199327/media/2574545a2a10397d6bb43b8001ecc585.png" alt="">
-        <div class="flex flex-col ml-10 px-10 py-6" >
-          <p class=" font-mono text-xl h-6 mb-4" ><strong>DocMe</strong></p>
+      <article class="rounded md:h-80 h-fit bg-gradient-to-l from-indigo-50 py-2 xl:flex-row flex flex-col" >
+        <img class=" max-h-full xl:block hidden" src="https://cdn.dribbble.com/users/1756963/screenshots/16199327/media/2574545a2a10397d6bb43b8001ecc585.png" alt="">
+        <div class="flex flex-col xl:ml-10 xl:px-10 pr-10 py-6" >
+          <p class=" font-mono text-xl h-6 mb-4" ><strong>ThirdShop</strong></p>
           <p class=" font-light text-base" >
             Application communautaire basée sur l'échange de données sur des produits. <br>
             Elle a pour objectif de fournir des images, vidéos, documents... permettant l'entretien et la réparation de produits électroménagers, véhicules, etc.<br>
             De plus, un espace pour les professionnels et particuliers vendant des pièces sera mis en place.
           </p>
-          <div class="flex flex-col mt-auto" >
+          <div class="flex flex-col xl:mt-auto mt-8" >
             <span class=" font-semibold" >Stack : </span>
             <ul>
-              <li><a target="_blank" href="https://bun.sh/">Bun</a></li>
-              <li><a target="_blank" href="https://nuxt.com/">Nuxt 3</a></li>
-              <li><a target="_blank" href="https://postgresql.org/">Postgresql </a></li>
+              <li><a target="_blank" href="https://bun.sh/">Go</a></li>
+              <li><a target="_blank" href="https://nuxt.com/">Svelte</a></li>
+              <li><a target="_blank" href="https://postgresql.org/">Postgresql</a></li>
             </ul>
           </div>
         </div>
         <!-- <button class="py-2 px-2 underline opacity-20 ">Intéressé par le projet ? <br> Voir Plus</button> -->
       </article>
     </section>
-
-    <section class="mt-16" >
+    
+    <section class="mt-16 h-fit" >
       <h4 class=" text-2xl ">Projets d'entreprises</h4> 
       <br>
       <div class="grid grid-cols-1 grid-rows-1 group w-full group " >
